@@ -1,0 +1,158 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1000;
+background-color: rgba(0, 0, 0, 0.534);
+    backdrop-filter: blur(10px); 
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(22, 255, 255);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+
+
+
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin: 0 20px;
+    padding: 10px 20px;
+
+}
+
+.social-icons a {
+    color: rgb(0, 255, 255);
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-toggle i {
+    display: none;
+    color: white;
+}
+@media (max-width: 1068px) {
+    .navbar {
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        background: rgb(0 0 0 / 68%);
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        transition: left 0.3sease-in-out;
+        backdrop-filter: blur(0px);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .social-icons {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .menu-toggle i {
+        display: inline-block;
+    }
+
+    .open-menu {
+        display: inline-block;
+    }
+
+    .close-menu {
+        display: none;
+    }
+
+    .menu-open .open-menu {
+        display: none;
+    }
+
+    .menu-open .close-menu {
+        display: inline-block;
+    }
+
+    .social-icons{
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        padding: 15px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .social-icons {
+        margin-left: 0;
+    }
+}
